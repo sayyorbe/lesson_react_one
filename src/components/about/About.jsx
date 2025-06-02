@@ -1,5 +1,5 @@
 import React from "react";
-// ? css
+// ? css import
 import "./about.css";
 
 // ? img
@@ -22,7 +22,7 @@ const About = () => {
             CSS, and other cutting-edge technologies.
           </p>
           <p>
-            Throughout my career, I have successfully delivered multiple
+            Throughout my  career, I have successfully delivered multiple
             projects, ensuring clean code, performance optimization, and
             seamless user experience.
           </p>

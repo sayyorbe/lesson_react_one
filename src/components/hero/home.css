@@ -14,6 +14,11 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 50px;
+}
+.home-mode.dark{
+  background-color: var(--black);
+  color: var(--white);
 }
 
 .hero-text {
@@ -24,6 +29,7 @@
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
+  /* color: var(--black); */
 }
 
 .gradient-text {
@@ -96,4 +102,55 @@
   width: 320px;
   border-radius: 2rem;
   object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* dark  */
+/* DARK MODE USLUBLAR */
+.hero.dark {
+  /* background: var(--black); */
+  background: linear-gradient(to right, #1e293b, #0f172a);
+  color: var(--white);
+}
+
+.hero.dark .subtitle,
+.hero.dark .description {
+  color: #cbd5e1;
+}
+
+.hero.dark .btn.primary {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.hero.dark .btn.primary:hover {
+  background-color: #2563eb;
+}
+
+.hero.dark .btn.outline {
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+.hero.dark .btn.outline:hover {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.hero.dark .social-icons a {
+  color: #cbd5e1;
+}
+
+.hero.dark .social-icons a:hover {
+  color: #3b82f6;
 }

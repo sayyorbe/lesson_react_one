@@ -4,7 +4,7 @@ import "./header.css";
 import '../../App.css';
 import { IoLanguageOutline } from "react-icons/io5";
 
-function Header() {
+function Header({isDarkMode, toggleDarkMode}) {
   const [active, setActive] = useState(true);
 
   const [darkMode, setDarkMode] = useState(false);
@@ -20,7 +20,7 @@ function Header() {
   };
 
   return (
-    <header className={`header ${darkMode ? 'dark' : ''}`}>
+    <header className={`header home-mode ${isDarkMode ? 'dark' : 'light'}`}>
       <div className="display-flex container">
         <div className="font-size-20 logo blue">Sayyorbek.dev</div>
 
@@ -35,8 +35,9 @@ function Header() {
         <div className="actions display-flex">
           <IoLanguageOutline onClick={() => setMenuOpen(false)} className='icon-btn black font-size-20' />
 
-          <button onClick={() => setDarkMode(!darkMode)} className="icon-btn black">
-            {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+          <button onClick={toggleDarkMode} className="icon-btn black">
+            {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
+             {/* {isDarkMode ? 'Light Mode' : 'Dark Mode'} */}
           </button>
 
           <a href="#contact" className="cta-btn white">Hire Me</a>

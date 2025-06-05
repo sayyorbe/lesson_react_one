@@ -26,13 +26,56 @@ const projects = [
     github: 'https://github.com/your-name/ecommerce-app',
     live: 'https://ecommerce-app.example.com',
   },
+  {
+    title: 'Netflix Clone',
+    image: img_1,
+    tech: ['React', 'Firebase', 'Tailwind'],
+    github: 'https://github.com/your-name/netflix-clone',
+    live: 'https://netflix-clone.example.com',
+  },
+  {
+    title: 'E-commerce App',
+    image: img_1,
+    tech: ['Next.js', 'Stripe', 'Sanity'],
+    github: 'https://github.com/your-name/ecommerce-app',
+    live: 'https://ecommerce-app.example.com',
+  },
+  {
+    title: 'Netflix Clone',
+    image: img_1,
+    tech: ['React', 'Firebase', 'Tailwind'],
+    github: 'https://github.com/your-name/netflix-clone',
+    live: 'https://netflix-clone.example.com',
+  },
+  
+  {
+    title: 'E-commerce App',
+    image: img_1,
+    tech: ['Next.js', 'Stripe', 'Sanity'],
+    github: 'https://github.com/your-name/ecommerce-app',
+    live: 'https://ecommerce-app.example.com',
+  },
+  {
+    title: 'E-commerce App',
+    image: img_1,
+    tech: ['Next.js', 'Stripe', 'Sanity'],
+    github: 'https://github.com/your-name/ecommerce-app',
+    live: 'https://ecommerce-app.example.com',
+  },
+  {
+    title: 'E-commerce App',
+    image: img_1,
+    tech: ['Next.js', 'Stripe', 'Sanity'],
+    github: 'https://github.com/your-name/ecommerce-app',
+    live: 'https://ecommerce-app.example.com',
+  },
   // ko'proq projectlar qo'shiladi
 ];
 
 
-const Portfolio = () => {
+const Portfolio = ({isDarkMode}) => {
   return (
-    <section id="portfolio" className="portfolio-section">
+    <section id="portfolio" className={`portfolio-section ${isDarkMode ? "dark" : ""}`}>
       <div className="container">
         <h2 className="section-title">My Projects</h2>
         <div className="projects-grid">

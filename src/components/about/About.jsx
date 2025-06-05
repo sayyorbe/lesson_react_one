@@ -5,9 +5,9 @@ import "./about.css";
 // ? img
 import profilePic from "../../assets/my-photo.jpg";
 
-const About = () => {
+const About = ({isDarkMode}) => {
   return (
-    <section id="about" className="about-section">
+    <section id="about" className= {`about-section display ${isDarkMode ? "dark" : ""}`} >
       <div className="container about-container">
         <div className="about-image">
           <img src={profilePic} alt="Sayyorbek" />
@@ -27,7 +27,26 @@ const About = () => {
             seamless user experience.
           </p>
 
-          <a href="/cv.pdf" download className="btn primary-btn">
+          <div className="box-bar display-flex">
+            <div className="box">
+              <h1 className="font-size-35">+2</h1>
+              <p className="font-size-20">Years of Experience</p>
+            </div>
+            <div className="box">
+               <h1 className="font-size-35">+23</h1>
+              <p className="font-size-20">Happy Customers</p>
+            </div>
+            <div className="box">
+               <h1 className="font-size-35">+5</h1>
+              <p className="font-size-20">Completed Projects</p>
+            </div>
+            <div className="box">
+               <h1 className="font-size-35">+20</h1>
+              <p className="font-size-20">Total Students</p>
+            </div>
+          </div>
+
+          <a href="/myInform.docx" download className="btn primary-btn">
             Download CV
           </a>
 

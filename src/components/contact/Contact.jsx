@@ -2,9 +2,9 @@ import React from 'react';
 import './contact.css';
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt, FaTelegramPlane } from 'react-icons/fa';
 
-const Contact = () => {
+const Contact = ({isDarkMode}) => {
   return (
-    <section id="contact" className="contact-section">
+    <section id="contact" className={`contact-section ${isDarkMode ? "dark" : ""}`}>
       <div className="container">
         <h2 className="section-title">Contact Me</h2>
         <p className="contact-subtitle">Feel free to get in touch with me 👇</p>
@@ -14,20 +14,20 @@ const Contact = () => {
           <div className="contact-info">
             <div className="info-box">
               <FaMapMarkerAlt className="icon" />
-              <p>Samarkand, Uzbekistan</p>
+              <p className='font-size-20'>Samarkand, Uzbekistan</p>
             </div>
             <div className="info-box">
               <FaEnvelope className="icon" />
-              <p>sayyorbekxoliqov@gmail.com</p>
+              <p className='font-size-20'>sayyorbekxoliqov@gmail.com</p>
             </div>
             <div className="info-box">
               <FaPhoneAlt className="icon" />
-             <a href="tel:+998979359707">+998 97 935 97 07</a>
+             <a className='font-size-20 blue contact-telephone' href="tel:+998979359707">+998 97 935 97 07</a>
 
             </div>
             <div className="info-box">
               <FaTelegramPlane className="icon" />
-              <a href="https://t.me/Khalikov_Salih" target="_blank" rel="noreferrer">
+              <a href="https://t.me/Khalikov_Salih"className='font-size-20 blue contact-telegram' target="_blank" rel="noreferrer">
                 @sayyorbekdev
               </a>
             </div>

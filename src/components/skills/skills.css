@@ -1,8 +1,10 @@
+/* Section styling */
 .skills-section {
   padding: 80px 20px;
   background: linear-gradient(to right, #f8f9fa, #e8f0ff);
 }
 
+/* Title */
 .section-title {
   font-size: 36px;
   text-align: center;
@@ -10,12 +12,44 @@
   margin-bottom: 40px;
 }
 
+/* Tabs (Hard / Soft) */
+.Types-of-skills {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 30px;
+}
+
+.Types-of-skills > h1,
+.Types-of-skills > h2 {
+  color: var(--blue);
+}
+
+.tab {
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.3s;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+}
+
+.tab:hover {
+  color: #007bff;
+}
+
+.active-tab {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+
+/* Grid for skills */
 .skills-grid {
   display: grid;
   gap: 30px;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
+/* Individual skill card */
 .skill-card {
   background-color: #fff;
   padding: 20px;
@@ -23,30 +57,35 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   text-align: center;
   transition: transform 0.3s ease;
+  border: 2px solid transparent;
 }
 
 .skill-card:hover {
   transform: translateY(-6px);
 }
 
+.skill-card.active {
+  border: 2px solid #007bff;
+  background-color: #e6f0ff;
+  color: #007bff;
+}
+
+/* Icon */
 .skill-icon {
   font-size: 40px;
   color: #007bff;
   margin-bottom: 10px;
 }
 
-
-.skill-bar {
-  margin-bottom: 15px;
-}
-
-.skill-bar span {
+/* Skill name and level */
+.skill-level {
+  font-size: 14px;
+  color: #333;
+  margin-top: 6px;
   display: block;
-  font-weight: 600;
-  margin-bottom: 5px;
-  color: #555;
 }
 
+/* Progress bar */
 .progress-bar {
   height: 10px;
   width: 100%;
@@ -63,9 +102,65 @@
   transition: width 0.4s ease-in-out;
 }
 
-.skill-level {
-  font-size: 14px;
-  color: #333;
-  margin-top: 6px;
-  display: block;
+
+/* === Dark mode styles === */
+
+.skills-section.dark {
+  background: linear-gradient(to right, #0f172a, #1e293b);
+}
+
+.skills-section.dark .section-title {
+  color: #e2e8f0;
+}
+
+.skills-section.dark .Types-of-skills > h1,
+.skills-section.dark .Types-of-skills > h2 {
+  color: #60a5fa;
+}
+
+.skills-section.dark .tab {
+  color: #94a3b8; /* yengil kulrang */
+  border-bottom-color: transparent;
+}
+
+.skills-section.dark .tab:hover {
+  color: #60a5fa;
+}
+
+.skills-section.dark .active-tab {
+  color: #60a5fa;
+  border-bottom-color: #60a5fa;
+}
+
+.skills-section.dark .skill-card {
+  background-color: #1e293b;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  color: #cbd5e1;
+  border-color: transparent;
+}
+
+.skills-section.dark .skill-card:hover {
+  transform: translateY(-6px);
+}
+
+.skills-section.dark .skill-card.active {
+  background-color: #2563eb;
+  border-color: #2563eb;
+  color: #e0e7ff;
+}
+
+.skills-section.dark .skill-icon {
+  color: #60a5fa;
+}
+
+.skills-section.dark .skill-level {
+  color: #cbd5e1;
+}
+
+.skills-section.dark .progress-bar {
+  background-color: #334155;
+}
+
+.skills-section.dark .progress {
+  background-color: #60a5fa;
 }

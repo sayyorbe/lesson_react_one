@@ -47,7 +47,7 @@
   border-radius: 8px;
   margin-bottom: 20px;
   font-size: 16px;
-  background-color: #fff;
+  background-color: var(--white);
   color: #111827;
   transition: border 0.3s ease;
 }
@@ -60,7 +60,7 @@
 
 .send-btn {
   background-color: #3b82f6;
-  color: #fff;
+  color: var(--white);
   padding: 14px;
   width: 100%;
   border: none;
@@ -71,5 +71,54 @@
 }
 
 .send-btn:hover {
-  background-color: #2563eb;
+  background-color: var(--blue);
+}
+
+
+/* Dark mode uchun qo'shimcha style'lar */
+.contact-section.dark {
+  background: linear-gradient(to right, #0f172a, #1e293b);  
+}
+
+.contact-section.dark .section-title {
+  color: var(--white);
+}
+
+.contact-section.dark .contact-subtitle {
+  color: #a0a0a0;
+}
+
+.contact-section.dark .contact-info .info-box {
+  color: #ccc;
+}
+
+.contact-section.dark .contact-info .icon {
+  color: #60a5fa; /* ochroq moviy */
+}
+
+.contact-section.dark .contact-form input,
+.contact-section.dark .contact-form textarea {
+  background-color: #1f3047;
+  color: var(--white);
+  border: 1px solid var(--blue);
+}
+
+.contact-section.dark .contact-form input:focus,
+.contact-section.dark .contact-form textarea:focus {
+  border-color: #60a5fa;
+}
+
+.contact-section.dark .send-btn {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.contact-section.dark .send-btn:hover {
+  background-color: #1e40af;
+}
+.contact-section.dark .contact-telegram{
+  color: var(--white);
+}
+.contact-section.dark .contact-telephone{
+  color: var(--white);
 }

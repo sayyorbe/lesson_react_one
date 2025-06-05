@@ -130,6 +130,57 @@ html {
 }
 
 
+/* ? dark mode light mode */
+.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+.light-mode {
+  background-color: #fff;
+  color: #222;
+}
+
+.header.dark {
+  background-color: #333;
+  color: white;
+}
+
+.header.light {
+  background-color: #f5f5f5;
+  color: black;
+}
+
+.home.dark {
+  background-color: #222;
+  color: #ddd;
+}
+
+.home.light {
+  background-color: #fafafa;
+  color: #333;
+}
+
+
+
+
+
+
+
+.App.light-mode {
+  background-color: #fff;
+  color: #222;
+  transition: all 0.3s ease;
+}
+
+.App.dark-mode {
+  background-color: #121212;
+  color: #eee;
+  transition: all 0.3s ease;
+}
+
+
+
 
 /* ? responsive */
 @media (max-width: 1230px){

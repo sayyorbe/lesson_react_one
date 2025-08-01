@@ -161,10 +161,13 @@
     text-align: center;
     gap: 30px; /* gap ni biroz kamaytirdim */
   }
-  .about-image img {
-    width: 220px;
-    margin: 0 auto 25px;
+   .about-image img {
+     width: 400px;
+      max-width: 100%;
+    margin: 30px 0px;
   }
+
+  
   .about-content {
     min-width: auto;
   }
@@ -175,13 +178,17 @@
     flex-direction: column;
     gap: 30px;
   }
+  .box-bar > .box{
+    width: 350px;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
   .about-image img {
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 20px;
+     width: 400px;
+      max-width: 100%;
+    margin: 30px 0px;
   }
   .about-content h2 {
     font-size: 2rem;

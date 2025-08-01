@@ -6,8 +6,20 @@ import Portfolio from "./components/portfolio/Portfolio";
 import Skills from "./components/skills/Skills";
 import Contact from './components/contact/Contact';
 import "./App.css";
+import "./I18"; // Sozlamalarni ishga tushurish
+import { useTranslation } from "react-i18next";
 
 function App() {
+
+  // ? languages
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
+
+
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showIntro, setShowIntro] = useState(true);
 
@@ -40,12 +52,12 @@ function App() {
 
       ) : (
         <>
-          <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-          <Home isDarkMode={isDarkMode} />
-          <About isDarkMode={isDarkMode} />
-          <Portfolio isDarkMode={isDarkMode} />
-          <Skills isDarkMode={isDarkMode} />
-          <Contact isDarkMode={isDarkMode} />
+          <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} changeLanguage ={changeLanguage } t={t} />
+          <Home isDarkMode={isDarkMode} t={t} />
+          <About isDarkMode={isDarkMode} t={t} />
+          <Portfolio isDarkMode={isDarkMode} t={t} />
+          <Skills isDarkMode={isDarkMode} t={t} />
+          <Contact isDarkMode={isDarkMode} t={t} />
         </>
       )}
     </div>

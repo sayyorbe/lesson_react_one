@@ -33,7 +33,7 @@
 }
 
 .gradient-text {
-  background: linear-gradient(to right, #2563eb, #4f46e5);
+  background: linear-gradient(to right, var(--blue), #4f46e5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -41,12 +41,12 @@
 .subtitle {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #4b5563;
+  color: var(--white-gray);
 }
 
 .description {
   font-size: 1rem;
-  color: #374151;
+  color: var(--white-gray);
   max-width: 500px;
   margin-bottom: 1.5rem;
 }
@@ -66,22 +66,22 @@
 }
 
 .btn.primary {
-  background-color: #2563eb;
-  color: white;
+  background-color: var(--blue);
+  color:var(--white);
 }
 
 .btn.primary:hover {
-  background-color: #1d4ed8;
+  transform: scale(1.03);
 }
 
 .btn.outline {
-  border: 2px solid #2563eb;
-  color: #2563eb;
+  border: 2px solid var(--blue);
+  color: var(--blue);
 }
 
 .btn.outline:hover {
-  background-color: #2563eb;
-  color: white;
+  background-color: var(--blue);
+  color:var(--white);
 }
 
 .social-icons {
@@ -90,12 +90,12 @@
 }
 
 .social-icons a {
-  color: #1f2937;
+  color: var(--gray);
   transition: color 0.2s;
 }
 
 .social-icons a:hover {
-  color: #2563eb;
+  color: var(--blue);
 }
 
 .hero-image img {
@@ -103,14 +103,6 @@
   border-radius: 2rem;
   object-fit: cover;
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -130,11 +122,11 @@
 
 .hero.dark .btn.primary {
   background-color: #3b82f6;
-  color: white;
+  color:var(--white);
 }
 
 .hero.dark .btn.primary:hover {
-  background-color: #2563eb;
+  background-color: var(--blue);
 }
 
 .hero.dark .btn.outline {
@@ -144,7 +136,7 @@
 
 .hero.dark .btn.outline:hover {
   background-color: #3b82f6;
-  color: white;
+  color:var(--white);
 }
 
 .hero.dark .social-icons a {
@@ -153,4 +145,12 @@
 
 .hero.dark .social-icons a:hover {
   color: #3b82f6;
+}
+
+@media (max-width: 768px) {
+
+  .title{
+    margin-top: 30px;
+  }
+  
 }

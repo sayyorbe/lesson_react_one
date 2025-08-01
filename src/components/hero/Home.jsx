@@ -6,29 +6,27 @@ import { Github, Linkedin } from "lucide-react";
 import { PiTelegramLogo, PiInstagramLogo } from "react-icons/pi";
 import profileImg from "../../assets/my-photo-2.jpg";
 
-const Home = ({ isDarkMode }) => {
+const Home = ({ isDarkMode,t  }) => {
   return (
     <section id="home" className={`hero ${isDarkMode ? "dark" : ""}`}>
       <div className="hero-content">
         {/* Matn qismi */}
         <div className="hero-text">
           <h1 className="title">
-            Hi, I'm <span className="gradient-text">Sayyorbek</span>
+            {t("Hi, I'm ")} <span className="gradient-text">{t("Sayyorbek")}</span>
           </h1>
-          <h2 className="subtitle">Frontend Developer & UI Designer</h2>
+          <h2 className="subtitle">{t("Frontend Developer & UI/UX Designer")}</h2>
           <p className="description">
-            I create modern, responsive and beautiful web experiences. With 2+
-            years of experience building interfaces with React, Tailwind and
-            other modern tools.
+           {t(" I create modern, responsive and beautiful web experiences. With 2+ years of experience building interfaces with React, Tailwind andother modern tools.")}
           </p>
 
           {/* CTA tugmalar */}
           <div className="hero-buttons">
             <a href="#contact" className="btn primary">
-              Hire Me
+              {t("Hire Me")}
             </a>
             <a href="/myInform.docx" download className="btn outline">
-              Download CV
+              {t("Download CV")}
             </a>
           </div>
 

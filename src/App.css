@@ -29,6 +29,8 @@ button, i, svg{
   --black: #000;
   --minus-white: rgba(255, 255, 255, 0.7);
   --white: white;
+  --gray: #323232;
+  --white-gray:#4b5563;
 
 }
 
@@ -46,7 +48,7 @@ button, i, svg{
 
 .white{
   color: var(--white);
-}
+} 
 
 
 .background-blue{
@@ -138,11 +140,11 @@ html {
 
 .light-mode {
   background-color: var(--white);
-  color: #222;
+  color: var(--gray);
 }
 
 .header.dark {
-  background-color: #333;
+  background-color: var(--gray);
   color: white;
 }
 
@@ -152,13 +154,13 @@ html {
 }
 
 .home.dark {
-  background-color: #222;
+  background-color: var(--gray);
   color: #ddd;
 }
 
 .home.light {
-  background-color: #fafafa;
-  color: #333;
+  background-color: #f8f8f8;
+  color: var(--gray);
 }
 
 
@@ -169,7 +171,7 @@ html {
 
 .App.light-mode {
   background-color: var(--white);
-  color: #222;
+  color: var(--gray);
   transition: all 0.3s ease;
 }
 
@@ -199,7 +201,7 @@ html {
 .intro-screen {
   position: relative;
   height: 100vh;
-  background: #2563eb;
+  background: var(--blue);
   overflow: hidden;
   display: flex;
   align-items: center;

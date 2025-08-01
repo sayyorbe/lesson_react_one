@@ -73,11 +73,11 @@ const projects = [
 ];
 
 
-const Portfolio = ({isDarkMode}) => {
+const Portfolio = ({isDarkMode, t}) => {
   return (
     <section id="portfolio" className={`portfolio-section ${isDarkMode ? "dark" : ""}`}>
       <div className="container">
-        <h2 className="section-title">My Projects</h2>
+        <h2 className="section-title">{t("My Projects")}</h2>
         <div className="projects-grid">
           {projects.map((project, index) => (
             <div key={index} className="project-card">

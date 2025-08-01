@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './contact.css';
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt, FaTelegramPlane } from 'react-icons/fa';
 
-const Contact = ({ isDarkMode }) => {
+const Contact = ({ isDarkMode, t}) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",

@@ -10,6 +10,10 @@ import { PiFigmaLogoDuotone } from "react-icons/pi";
 
 // Soft skill iconlari
 import { FaComments, FaUsers, FaLightbulb, FaClock, FaBrain, FaPuzzlePiece } from 'react-icons/fa6';
+import { t } from 'i18next';
+
+const Skills = ({isDarkMode, t})  => {
+
 
 const hardSkills = [
   { name: 'Html5', icon: <FaHtml5 />, level: 95 },
@@ -22,15 +26,14 @@ const hardSkills = [
 ];
 
 const softSkills = [
-  { name: 'Communication', icon: <FaComments />, level: 90 },
-  { name: 'Teamwork', icon: <FaUsers />, level: 85 },
-  { name: 'Creativity', icon: <FaLightbulb />, level: 80 },
-  { name: 'Time Management', icon: <FaClock />, level: 85 },
-  { name: 'Problem Solving', icon: <FaPuzzlePiece />, level: 80 },
-  { name: 'Critical Thinking', icon: <FaBrain />, level: 75 },
+  { name: t('Communication'), icon: <FaComments />, level: 90 },
+  { name: t('Teamwork'), icon: <FaUsers />, level: 85 },
+  { name: t('Creativity'), icon: <FaLightbulb />, level: 80 },
+  { name: t('Time Management'), icon: <FaClock />, level: 85 },
+  { name: t('Problem Solving'), icon: <FaPuzzlePiece />, level: 80 },
+  { name: t('Critical Thinking'), icon: <FaBrain />, level: 75 },
 ];
 
-const Skills = ({isDarkMode})  => {
   const [activeTab, setActiveTab] = useState('hard');
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -43,7 +46,7 @@ const Skills = ({isDarkMode})  => {
   return (
     <section id="skills" className={`skills-section  ${isDarkMode ? "dark" : ""}`}>
       <div className="container">
-        <h2 className="section-title">My Skills</h2>
+        <h2 className="section-title">{t("My Skills")}</h2>
 
         <div className="Types-of-skills display-flex">
           <h1
@@ -53,7 +56,7 @@ const Skills = ({isDarkMode})  => {
               setActiveIndex(null);
             }}
           >
-            Hard Skills
+            {t("Hard Skills")}
           </h1>
           <h2
             className={activeTab === 'soft' ? 'tab active-tab' : 'tab'}
@@ -62,7 +65,7 @@ const Skills = ({isDarkMode})  => {
               setActiveIndex(null);
             }}
           >
-            Soft Skills
+            {t("Soft Skills")}
           </h2>
         </div>
 
